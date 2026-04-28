@@ -42,9 +42,10 @@ Run:
 
 apptainer run -B $PWD:/work ground_pymatgen.sif
 
-▶️ Local (Docker)
+### ▶️ Local (Docker)
 docker run -it -v $(pwd):/work ghcr.io/soheil-ershadrad/ground_pymatgen:latest
-📂 Output
+
+## 📂 Output
 
 The script generates folders:
 
@@ -61,18 +62,18 @@ POTCAR
 KPOINTS
 job.sh
 
-⚙️ Workflow
+## ⚙️ Workflow
 Reads structure from POSCAR
 Uses pymatgen's MagneticStructureEnumerator to generate magnetic configurations
 Reorders atoms to match original element ordering
 Updates MAGMOM in INCAR
 Writes new calculation folders for each configuration
 
-⚠️ Notes
+## ⚠️ Notes
 Ensure MAGMOM exists in your INCAR template
 Number of configurations can grow rapidly
 Suitable for high-throughput magnetic studies
 
-📚 Dependencies
+## 📚 Dependencies
 pymatgen
 enumlib (compiled inside container)
